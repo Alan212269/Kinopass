@@ -1,0 +1,42 @@
+<resources>
+    <!-- App navn -->
+    <string name="app_name">MOB3000</string>
+
+    <!-- Navigasjon -->
+    <string name="nav_home">Hjem</string>
+    <string name="nav_tickets">Billetter</string>
+
+    <!-- Home screen -->
+    <string name="now_showing">På kino nå</string>
+    <string name="search_movies">Søk etter film</string>
+    <string name="details">Detaljer</string>
+
+    <!-- Ticket / booking -->
+    <string name="confirm_booking_title">Bekreft bestilling</string>
+    <string name="confirm_booking_yes">Ja, bestill</string>
+    <string name="confirm_booking_no">Nei</string>
+    <string name="ticket_added">Billett bestilt!</string>
+
+    <!-- Seat picker -->
+    <string name="choose_seat">Velg sete</string>
+    <string name="screen">Lerret</string>
+    <string name="seat_confirm">Bekreft sete</string>
+    <string name="seat_cancel">Avbryt</string>
+    <string name="seat_taken">Opptatt</string>
+    <string name="seat_free">Ledig</string>
+    <string name="seat_selected">Valgt</string>
+
+    <!-- Ticket screen -->
+    <string name="tickets_title">Billetter</string>
+    <string name="ticket_new">Ny billett</string>
+    <string name="search_tickets">Søk etter tittel, sete eller tid…</string>
+    <string name="ticket_qr">QR</string>
+    <string name="ticket_delete">Slett</string>
+    <string name="no_tickets">Ingen billetter å vise.</string>
+
+    <!-- Login -->
+    <string name="login_title">Logg inn</string>
+    <string name="login_button">Logg inn</string>
+    <string name="logout">Logg ut</string>
+
+</resources>

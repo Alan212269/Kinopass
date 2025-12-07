@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest
+    package="no.usn.mob3000"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <!-- Tillatelse for å vise push-varsler på Android 13+ -->
+    <uses-permission android:name="android.permission.POST_NOTIFICATIONS" />
+
+    <!-- Tillatelse for å planlegge eksakte alarmer via AlarmManager (kreves for varsling 10 min før filmstart) -->
+    <uses-permission
+        android:name="android.permission.SCHEDULE_EXACT_ALARM"
+        tools:ignore="ProtectedPermissions" />
+
+    <!-- Ekstra eksakt-alarm tillatelse som enkelte Android-versjoner krever -->
+    <uses-permission android:name="android.permission.USE_EXACT_ALARM" />
+
+    <!-- Custom Application-klasse for global app-initialisering -->
+    <application
+        android:name=".KinopassApp"
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:theme="@style/Theme.Kinopass"
+        tools:targetApi="31">
+
+        <!-- Hovedaktiviteten som starter appen -->
+        <activity
+            android:name=".ui.MainActivity"
+            android:exported="true">
+            <intent-filter>
+                <!-- Definerer at dette er appens inngangspunkt -->
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+        <!-- BroadcastReceiver som mottar alarmen og sender varsel om filmstart -->
+        <receiver
+            android:name=".notifications.ScreeningReminderReceiver"
+            android:exported="false" />
+    </application>
+</manifest>
